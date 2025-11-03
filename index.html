@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html class="light" lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Yerba Mate Misionera</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <script>tailwind.config = { darkMode: "class", theme: { extend: { colors: { primary: "#5f8117", "background-light": "#f7f8f6", "background-dark": "#1c2012" }, fontFamily: { display: "Plus Jakarta Sans" }, borderRadius: { DEFAULT: "0.5rem", lg: "1rem", xl: "1.5rem", full: "9999px" } } } };</script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        body {
+            margin: 0;
+          
+            background: linear-gradient(135deg, #0b3e1fbe 0%, #ff7b0081 100%);
+                }
+    </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark font-display text-gray-800 dark:text-gray-200">
+    <script>
+        // guardo mensaje para enviar a whapp
+        const mensaje = "%F0%9F%93%A6%20Resumen%20de%20tu%20pedido%20de%20yerba%20mate%20%F0%9F%A7%89%0A%0A%F0%9F%91%A4%20Cliente%3A%20%5BNombre%20del%20cliente%5D%0A%F0%9F%93%9E%20Contacto%3A%20%5BN%C3%BAmero%20de%20tel%C3%A9fono%5D%0A%F0%9F%93%8D%20Direcci%C3%B3n%20de%20entrega%3A%20%5BUbicaci%C3%B3n%20exacta%5D%0A%F0%9F%95%92%20Franja%20horaria%3A%20%5BHorario%20disponible%20para%20recibir%5D%0A%0A%F0%9F%A7%BE%20Detalle%20del%20pedido%3A%0A%0ACantidad%3A%20%5BEj.%203%20kg%5D%0A%0APrecio%20total%3A%20%F0%9F%92%B2%5BEj.%20%2420.400%5D%0A%0ACosto%20de%20env%C3%ADo%3A%20%F0%9F%92%B2%5BA%20completar%20seg%C3%BAn%20ubicaci%C3%B3n%5D%0A%0ATotal%20a%20pagar%3A%20%F0%9F%92%B2%5BTotal%20final%5D%0A%0A%F0%9F%92%B3%20Datos%20para%20realizar%20el%20pago%3A%0AAlias%20%2F%20CBU%3A%20%5BTu%20alias%20o%20CBU%5D%3A%20yerbamate.misionera%20%0ATitular%3A%20Sofia%20Alegre%20%0A%0A%F0%9F%93%8C%20Record%C3%A1%20que%20el%20pago%20debe%20realizarse%20previamente%20para%20confirmar%20la%20entrega.%20%0A%0A%C2%A1Muchas%20gracias%20por%20tu%20compra%21%20%F0%9F%8C%BF%0AQuedo%20atenta%20al%20comprobante%20para%20coordinar%20el%20env%C3%ADo%20%F0%9F%9A%9A%F0%9F%98%8A%0A"
+        // numero de whapp
+        const numero = "5491173675821"
+    </script>
+    <div class="relative flex min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+        <div class="layout-container flex h-full grow flex-col">
+            <header class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm">
+                <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div
+                        class="flex items-center justify-between whitespace-nowrap border-b border-gray-200 dark:border-gray-700 py-3">
+                        <div class="flex items-center gap-4 text-[#111811] dark:text-white">
+                            <div class="size-6 text-primary">
+                                <img src="img/WhatsApp Image 2024-01-06 at 11.59.54 AM.jpeg" alt="icono"
+                                    class="w-full h-full object-contain">
+                            </div>
+                            <h2
+                                class="text-[#111811] dark:text-white text-lg font-bold leading-tight tracking-[-0.015em]">
+                                Yerba Mate Misionera</h2>
+                        </div>
+                        <div class="flex flex-1 justify-end">
+                            <nav class="hidden sm:flex items-center gap-9">
+                                <a class="text-[#111811] dark:text-gray-300 hover:text-primary dark:hover:text-primary text-sm font-medium leading-normal"
+                                    href="#productos">Productos</a>
+                                <a class="text-[#111811] dark:text-gray-300 hover:text-primary dark:hover:text-primary text-sm font-medium leading-normal"
+                                    href="#nuestra-yerba">Nuestra Yerba</a>
+                                <a class="text-[#111811] dark:text-gray-300 hover:text-primary dark:hover:text-primary text-sm font-medium leading-normal"
+                                    href="#contacto">Contacto</a>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <main class="flex-grow">
+                <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-5">
+                    <div class="layout-content-container flex flex-col flex-1 gap-10">
+                        <section>
+                            <div class="@container">
+                                <div class="@[480px]:p-4">
+                                    <div class="flex min-h-[480px] flex-col gap-6 bg-cover bg-center bg-no-repeat @[480px]:gap-8 rounded-xl items-center justify-center p-4 text-center"
+                                        data-alt="A person pouring hot water into a mate gourd, with yerba mate leaves in the background."
+                                        style='background-image: linear-gradient(rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.5) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuB1n8Kh04V2TWYopWCwiEVAjRTez7x4yIrT99LL1x-aI6B8v_DRfSTiqdl4DrWNrcpaoR_ye2j4_AFounr0qz_7eWhBtrf-VNmCIBLrJ7N5OvsK4arPCtoVGBqdzlUdSGT28WgUFdFtdF66nr14Jw_19sIWmDqWWFApJ8HXE6RnJjMKOlWLKjsPmdNzpxQ0r37oCPaL9rYyhBJTNj19wE7BZWwWVYTY3GbOcRNT-dqsRwEjcpTc2TiPO4KQgjrkBv2x3kaubMOQsQFw");'>
+                                        <div class="flex flex-col gap-2">
+                                            <h1
+                                                class="text-white text-4xl font-black leading-tight tracking-[-0.033em] @[480px]:text-5xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-[-0.033em]">
+                                                Yerba Mate Misionera: El Sabor Auténtico de la Tradición.</h1>
+                                            <h2
+                                                class="text-white text-sm font-normal leading-normal @[480px]:text-base @[480px]:font-normal @[480px]:leading-normal">
+                                                Descubre la calidad, origen y el sabor único de nuestra yerba mate.</h2>
+                                        </div>
+                                        <a class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-4 @[480px]:h-12 @[480px]:px-5 bg-primary text-[#111811] text-sm font-bold leading-normal tracking-[0.015em] @[480px]:text-base @[480px]:font-bold @[480px]:leading-normal @[480px]:tracking-[0.015em] transition-transform duration-200 hover:scale-105"
+                                            href="#productos">
+                                            <span class="truncate">Ver Productos</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="scroll-mt-20" id="productos">
+                            <h2
+                                class="text-[#111811] dark:text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">
+                                Nuestros Productos</h2>
+                            <div class="grid grid-cols-[repeat(auto-fit,minmax(158px,1fr))] gap-4 p-4">
+                                <div
+                                    class="flex flex-col gap-3 pb-3 bg-white dark:bg-gray-800/20 p-4 rounded-xl shadow-sm hover:shadow-lg transition-shadow">
+                                    <div class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-lg"
+                                        data-alt="Package of Yerba Mate Misionera 1kg"
+                                        style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDiQVi4Pikp4T8LVGNHPFMFf_HLLNhRl5f91YgLNH3ZOJhNAdw9jYnODKymLnBwQ8ObS4ON5hiJFsPRZUNou5tFsY2WUIlDd9y4nBuI85t3qlP88tctR9UoiWPm03Ut8y7u7klSWy-KS_OXsnx06CNe0WEfV-628SROEhBp215Rut9xTGfSgSoK4Pb2_kj26h9awIgtzr4xaEnSDBXUU0ILwLb4ogaB-Vh1TkPHTLCiISqGLFsqc5OJuKOLGzLqkAMdJscTFU4hZX_c");'>
+                                    </div>
+                                    <div>
+                                        <p class="text-[#111811] dark:text-white text-base font-medium leading-normal">
+                                            Yerba Mate 1kg</p>
+                                        <p class="text-primary dark:text-primary/90 text-sm font-bold leading-normal">
+                                            $15.00</p>
+                                    </div>
+                                </div>
+                                <div
+                                    class="flex flex-col gap-3 pb-3 bg-white dark:bg-gray-800/20 p-4 rounded-xl shadow-sm hover:shadow-lg transition-shadow">
+                                    <div class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-lg"
+                                        data-alt="Package of Yerba Mate Misionera 1/2kg"
+                                        style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC2Drn2nXzHFaWIG_yYzzuYacsTAQ_RJqIKBlvkX7T6TA5IYhp1hWE1BcAt3jwziGD1H_ZHcoXr183_IVKV1r9HG3aU0G9f_DFjYNPaUy3jvD2qSqAX0Ij5w2U6e4D_yu4zDVU3ji1J22vzv0NKXzuWtTZZvWRJ4WWDTufEMC4-Yznmr4dEE9gm1C0Qg3QlUCXQ9g4z0sEMOjH2aS_1fIQXZyWY2NRByDtBKpKESU2QVIBFJzkbtuSeNJiCJW-_4Aa4f44Ar24kQBIM");'>
+                                    </div>
+                                    <div>
+                                        <p class="text-[#111811] dark:text-white text-base font-medium leading-normal">
+                                            Yerba Mate 1/2kg</p>
+                                        <p class="text-primary dark:text-primary/90 text-sm font-bold leading-normal">
+                                            $8.00</p>
+                                    </div>
+                                </div>
+                                <div
+                                    class="flex flex-col gap-3 pb-3 bg-white dark:bg-gray-800/20 p-4 rounded-xl shadow-sm hover:shadow-lg transition-shadow">
+                                    <div class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-lg"
+                                        data-alt="Pack of 10 1kg bags of Yerba Mate Misionera"
+                                        style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB12xwpc7AWzgtkzw5AJVvCAlc-E1SvnqR67FxF1dpx5pYA6SqOrnCfPO9655nB6EZTMbEDt-OohXPYkDlUB9hRwBzpOFEL-TwBOmOoyk84MhWShXsRm4opXlEI6xCQ4I9vl1VHkkJ8GN2vcThyx57pqcrSBAMVEs0yN-KF_IS8fiI9uBkrBN-G8MKzHaWaBfxgJDWuWutM3-qjwezz_qJSHJaKiQ_yFARoPI7KtDknqImYXT3pWVDTF0IZVqPQ4VU04iYeCnk8dLs7");'>
+                                    </div>
+                                    <div>
+                                        <p class="text-[#111811] dark:text-white text-base font-medium leading-normal">
+                                            Pack x10 1kg</p>
+                                        <p class="text-primary dark:text-primary/90 text-sm font-bold leading-normal">
+                                            $140.00</p>
+                                    </div>
+                                </div>
+                                <div
+                                    class="flex flex-col gap-3 pb-3 bg-white dark:bg-gray-800/20 p-4 rounded-xl shadow-sm hover:shadow-lg transition-shadow">
+                                    <div class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-lg"
+                                        data-alt="Pack of 10 1/2kg bags of Yerba Mate Misionera"
+                                        style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuANdTuxkKxx2dz3pKN_bk8Ja22GIZ4NkVVaL4T9miTw9QmR9Kq6aVKf2_tkq1YxgcaNr5EHYLuDVfwjzMeJZwcG8LJrb96Qkhutp3fPH0NkqaOj2OyIN7fO0hDxZ8uwPNxN50bfYKJb81nUK3TAGa8hxkymiX86nBkGfe0W71bWaKXJ_WgaWbljU4GFjmb29_7nA1NZ-gcnWIgBvZzO-yp07cZGMNzkFC25dM03xjgBlOhFiEH8uDnWvkkmmPas_xSY3Cc-zdxKXrkk");'>
+                                    </div>
+                                    <div>
+                                        <p class="text-[#111811] dark:text-white text-base font-medium leading-normal">
+                                            Pack x10 1/2kg</p>
+                                        <p class="text-primary dark:text-primary/90 text-sm font-bold leading-normal">
+                                            $75.00</p>
+                                    </div>
+                                </div>
+                                <div
+                                    class="flex flex-col gap-3 pb-3 bg-white dark:bg-gray-800/20 p-4 rounded-xl shadow-sm hover:shadow-lg transition-shadow">
+                                    <div class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-lg"
+                                        data-alt="A large 5kg bag of Yerba Mate Misionera"
+                                        style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuABOIsgYeQysAgxZzLZQKWMiyb_rn6BK07iIxtYHJM90_ZKnGah4q7T3654U2Rn9o-aqhPWxft1bEtmrUA5ZyFmXF7KTPrkNR67-bUBLFrxbHGfrVIsZ9-t1ZlKSgPBOQKEygU6GiZrMZEMLoPdvV_tuO5off_cgWVw1KYsWKqG87RnFVZalDFQ0jfZrWufXSmIfGcruaV-1A48lrMi3JWP7d3e--h-b-TWXMBxLloi8g-adU-Z0I9nH1MDTVjCtwnd4shEbAeiXKaV");'>
+                                    </div>
+                                    <div>
+                                        <p class="text-[#111811] dark:text-white text-base font-medium leading-normal">
+                                            Bolsa 5kg</p>
+                                        <p class="text-primary dark:text-primary/90 text-sm font-bold leading-normal">
+                                            $70.00</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex px-4 py-8 justify-center">
+                                <a class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-12 px-5 bg-primary text-[#111811] gap-2 text-base font-bold leading-normal tracking-[0.015em] transition-transform duration-200 hover:scale-105 shadow-lg"
+                                    href="https://wa.me/5491173675821?text=Genera%20de%20tu%20pedido%20de%20yerba%20mate%20%0A%0ACliente%3A%20%5BNombre%20del%20cliente%5D%0ADirecci%C3%B3n%20de%20entrega%3A%20%5BUbicaci%C3%B3n%20exacta%5D%0AFranja%20horaria%3A%20%5BHorario%20disponible%20para%20recibir%5D%0A%0ADetalle%20del%20pedido%3A%0ACantidad%3A%20%5BEj.%203%20kg%5D%0A%0ADatos%20para%20realizar%20el%20pago%3A%0AAlias%20%2F%20CBU%3A%20%5BTu%20alias%20o%20CBU%5D%3A%0ACBU%20a%20pagar%3A%20yerbamate.misionera%20%0ATitular%3A%20Sofia%20Alegre%20%0A%0ARecord%C3%A1%20que%20el%20pago%20debe%20realizarse%20previamente%20para%20confirmar%20la%20entrega.%20%0A%C2%A1Muchas%20gracias%20por%20tu%20compra%21%20%0AQuedo%20atenta%20al%20comprobante%20para%20coordinar%20el%20env%C3%ADo%20"
+                                    rel="noopener noreferrer" target="_blank">
+                                    <span class="material-symbols-outlined text-[#111811]">chat</span>
+                                    <span class="truncate">Comprar a través de WhatsApp</span>
+                                </a>
+                            </div>
+                        </section>
+                        <section class="scroll-mt-20 py-10" id="nuestra-yerba">
+                            <div class="grid md:grid-cols-2 gap-8 items-center">
+                                <div class="w-full aspect-[4/3] rounded-xl bg-cover bg-center"
+                                    data-alt="Green fields of yerba mate plantation under a blue sky."
+                                    style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBkcFIpSrOLNbnWJb23piDBcyS0PIlWhzbIRwbAqCf7pzCov2x77fz94RfeyLdBl6dTcsnQaMOQ4f0kvJD_XpxpYEaCUa4UxjVrhAIs95MYGiZ4eFzPQmXLUCJlVd1JHCaRTUOYZB3cE5rOJqk4KJmkor1lqEXlzG5HfCdaoB2av5SwPNmfKRbd8ODUxOfpr9CZ62pOKeaxaYjq1peKbw20_Ag_obUjsg0gMzjtcCd4v9NCe9BW8nuOA9hsFtxKz4qVPSkSUnBLQyZN');">
+                                </div>
+                                <div>
+                                    <h2
+                                        class="text-[#111811] dark:text-white text-[22px] font-bold leading-tight tracking-[-0.015em] mb-4">
+                                        Desde el Corazón de Misiones</h2>
+                                    <p class="text-gray-600 dark:text-gray-300 mb-4">Nuestra yerba mate proviene de las
+                                        fértiles tierras rojas de Misiones, Argentina. Cosechada a mano por expertos
+                                        agricultores, cada hoja es seleccionada para garantizar la máxima calidad y un
+                                        sabor inigualable que honra la tradición matera.</p>
+                                    <p class="text-gray-600 dark:text-gray-300">Utilizamos un proceso de secado
+                                        tradicional que preserva las propiedades naturales de la yerba, resultando en un
+                                        producto 100% natural, con un sabor intenso y duradero. Disfruta de la energía y
+                                        los beneficios de un mate auténtico.</p>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="py-10">
+                            <h2
+                                class="text-[#111811] dark:text-white text-center text-[22px] font-bold leading-tight tracking-[-0.015em] mb-8">
+                                Tipos de Molienda</h2>
+                            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                                <div
+                                    class="flex flex-col items-center gap-4 p-6 bg-white dark:bg-gray-800/20 rounded-xl shadow-sm">
+                                    <div
+                                        class="w-16 h-16 rounded-full bg-primary/20 dark:bg-primary/30 flex items-center justify-center">
+                                        <span class="material-symbols-outlined text-primary text-3xl">grain</span>
+                                    </div>
+                                    <h3 class="font-bold text-lg text-[#111811] dark:text-white">Molienda Fina</h3>
+                                    <ul class="text-sm text-gray-600 dark:text-gray-400 space-y-2">
+                                        <li class="flex items-center gap-2 justify-center"><span
+                                                class="material-symbols-outlined text-primary text-base">thermostat</span><span>Agua:
+                                                70-75°C</span></li>
+                                        <li class="flex items-center gap-2 justify-center"><span
+                                                class="material-symbols-outlined text-primary text-base">local_florist</span><span>Sabor:
+                                                Intenso</span></li>
+                                        <li class="flex items-center gap-2 justify-center"><span
+                                                class="material-symbols-outlined text-primary text-base">battery_full</span><span>Rinde:
+                                                1 termo</span></li>
+                                    </ul>
+                                </div>
+                                <div
+                                    class="flex flex-col items-center gap-4 p-6 bg-white dark:bg-gray-800/20 rounded-xl shadow-sm">
+                                    <div
+                                        class="w-16 h-16 rounded-full bg-primary/20 dark:bg-primary/30 flex items-center justify-center">
+                                        <span class="material-symbols-outlined text-primary text-3xl">grain</span>
+                                    </div>
+                                    <h3 class="font-bold text-lg text-[#111811] dark:text-white">Molienda Intermedia
+                                    </h3>
+                                    <ul class="text-sm text-gray-600 dark:text-gray-400 space-y-2">
+                                        <li class="flex items-center gap-2 justify-center"><span
+                                                class="material-symbols-outlined text-primary text-base">thermostat</span><span>Agua:
+                                                75-80°C</span></li>
+                                        <li class="flex items-center gap-2 justify-center"><span
+                                                class="material-symbols-outlined text-primary text-base">balance</span><span>Sabor:
+                                                Equilibrado</span></li>
+                                        <li class="flex items-center gap-2 justify-center"><span
+                                                class="material-symbols-outlined text-primary text-base">battery_5_bar</span><span>Rinde:
+                                                ~75% termo</span></li>
+                                    </ul>
+                                </div>
+                                <div
+                                    class="flex flex-col items-center gap-4 p-6 bg-white dark:bg-gray-800/20 rounded-xl shadow-sm">
+                                    <div
+                                        class="w-16 h-16 rounded-full bg-primary/20 dark:bg-primary/30 flex items-center justify-center">
+                                        <span class="material-symbols-outlined text-primary text-3xl">grain</span>
+                                    </div>
+                                    <h3 class="font-bold text-lg text-[#111811] dark:text-white">Molienda Gruesa</h3>
+                                    <ul class="text-sm text-gray-600 dark:text-gray-400 space-y-2">
+                                        <li class="flex items-center gap-2 justify-center"><span
+                                                class="material-symbols-outlined text-primary text-base">thermostat</span><span>Agua:
+                                                80-85°C</span></li>
+                                        <li class="flex items-center gap-2 justify-center"><span
+                                                class="material-symbols-outlined text-primary text-base">eco</span><span>Sabor:
+                                                Suave</span></li>
+                                        <li class="flex items-center gap-2 justify-center"><span
+                                                class="material-symbols-outlined text-primary text-base">battery_3_bar</span><span>Rinde:
+                                                ~50% termo</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="mt-8 text-center bg-primary/10 dark:bg-primary/20 p-4 rounded-lg">
+                                <p class="text-sm text-primary dark:text-primary/90 font-semibold"><span
+                                        class="font-bold">Consejo extra:</span> Inclina la yerba y ceba siempre desde el
+                                    costado.</p>
+                            </div>
+                        </section>
+                        <section class="py-10">
+                            <div class="grid grid-cols-1 sm:grid-cols-3 gap-8 text-center">
+                                <div class="flex flex-col items-center gap-2">
+                                    <div
+                                        class="w-16 h-16 rounded-full bg-primary/20 dark:bg-primary/30 flex items-center justify-center">
+                                        <span class="material-symbols-outlined text-primary text-3xl">eco</span>
+                                    </div>
+                                    <h3 class="font-bold text-lg text-[#111811] dark:text-white">100% Natural</h3>
+                                    <p class="text-sm text-gray-600 dark:text-gray-400">Sin aditivos ni conservantes,
+                                        solo pura hoja de yerba mate.</p>
+                                </div>
+                                <div class="flex flex-col items-center gap-2">
+                                    <div
+                                        class="w-16 h-16 rounded-full bg-primary/20 dark:bg-primary/30 flex items-center justify-center">
+                                        <span
+                                            class="material-symbols-outlined text-primary text-3xl">local_fire_department</span>
+                                    </div>
+                                    <h3 class="font-bold text-lg text-[#111811] dark:text-white">Secado Tradicional</h3>
+                                    <p class="text-sm text-gray-600 dark:text-gray-400">Proceso artesanal que garantiza
+                                        un sabor y aroma únicos.</p>
+                                </div>
+                                <div class="flex flex-col items-center gap-2">
+                                    <div
+                                        class="w-16 h-16 rounded-full bg-primary/20 dark:bg-primary/30 flex items-center justify-center">
+                                        <span class="material-symbols-outlined text-primary text-3xl">local_cafe</span>
+                                    </div>
+                                    <h3 class="font-bold text-lg text-[#111811] dark:text-white">Sabor Intenso</h3>
+                                    <p class="text-sm text-gray-600 dark:text-gray-400">Un perfil de sabor robusto que
+                                        perdura en cada mateada.</p>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </main>
+            <footer class="bg-gray-100 dark:bg-gray-900/50 mt-10" id="contacto">
+                <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+                    <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                        <div class="flex items-center gap-4 text-[#111811] dark:text-white">
+                            <div class="size-6 text-primary">
+                                <svg fill="currentColor" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M13.8261 30.5736C16.7203 29.8826 20.2244 29.4783 24 29.4783C27.7756 29.4783 31.2797 29.8826 34.1739 30.5736C36.9144 31.2278 39.9967 32.7669 41.3563 33.8352L24.8486 7.36089C24.4571 6.73303 23.5429 6.73303 23.1514 7.36089L6.64374 33.8352C8.00331 32.7669 11.0856 31.2278 13.8261 30.5736Z">
+                                    </path>
+                                    <path clip-rule="evenodd"
+                                        d="M39.998 35.764C39.9944 35.7463 39.9875 35.7155 39.9748 35.6706C39.9436 35.5601 39.8949 35.4259 39.8346 35.2825C39.8168 35.2403 39.7989 35.1993 39.7813 35.1602C38.5103 34.2887 35.9788 33.0607 33.7095 32.5189C30.9875 31.8691 27.6413 31.4783 24 31.4783C20.3587 31.4783 17.0125 31.8691 14.2905 32.5189C12.0012 33.0654 9.44505 34.3104 8.18538 35.1832C8.17384 35.2075 8.16216 35.233 8.15052 35.2592C8.09919 35.3751 8.05721 35.4886 8.02977 35.589C8.00356 35.6848 8.00039 35.7333 8.00004 35.7388C8.00004 35.739 8 35.7393 8.00004 35.7388C8.00004 35.7641 8.0104 36.0767 8.68485 36.6314C9.34546 37.1746 10.4222 37.7531 11.9291 38.2772C14.9242 39.319 19.1919 40 24 40C28.8081 40 33.0758 39.319 36.0709 38.2772C37.5778 37.7531 38.6545 37.1746 39.3151 36.6314C39.9006 36.1499 39.9857 35.8511 39.998 35.764ZM4.95178 32.7688L21.4543 6.30267C22.6288 4.4191 25.3712 4.41909 26.5457 6.30267L43.0534 32.777C43.0709 32.8052 43.0878 32.8338 43.104 32.8629L41.3563 33.8352C43.104 32.8629 43.1038 32.8626 43.104 32.8629L43.1051 32.865L43.1065 32.8675L43.1101 32.8739L43.1199 32.8918C43.1276 32.906 43.1377 32.9246 43.1497 32.9473C43.1738 32.9925 43.2062 33.0545 43.244 33.1299C43.319 33.2792 43.4196 33.489 43.5217 33.7317C43.6901 34.1321 44 34.9311 44 35.7391C44 37.4427 43.003 38.7775 41.8558 39.7209C40.6947 40.6757 39.1354 41.4464 37.385 42.0552C33.8654 43.2794 29.133 44 24 44C18.867 44 14.1346 43.2794 10.615 42.0552C8.86463 41.4464 7.30529 40.6757 6.14419 39.7209C4.99695 38.7775 3.99999 37.4427 3.99999 35.7391C3.99999 34.8725 4.29264 34.0922 4.49321 33.6393C4.60375 33.3898 4.71348 33.1804 4.79687 33.0311C4.83898 32.9556 4.87547 32.8935 4.9035 32.8471C4.91754 32.8238 4.92954 32.8043 4.93916 32.7889L4.94662 32.777L4.95178 32.7688ZM35.9868 29.004L24 9.77997L12.0131 29.004C12.4661 28.8609 12.9179 28.7342 13.3617 28.6282C16.4281 27.8961 20.0901 27.4783 24 27.4783C27.9099 27.4783 31.5719 27.8961 34.6383 28.6282C35.082 28.7342 35.5339 28.8609 35.9868 29.004Z"
+                                        fill-rule="evenodd"></path>
+                                </svg>
+                            </div>
+                            <h2
+                                class="text-[#111811] dark:text-white text-lg font-bold leading-tight tracking-[-0.015em]">
+                                Yerba Mate Misionera</h2>
+                        </div>
+                        <div class="text-sm text-center md:text-right text-gray-600 dark:text-gray-400">
+                            <p>© 2024 Yerba Mate Misionera. Todos los derechos reservados.</p>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+</body>
+
+</html>
